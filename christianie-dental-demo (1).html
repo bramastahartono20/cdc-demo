@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christianie Dental Care — Est. 1992 · Surakarta</title>
+<meta name="description" content="Klinik gigi spesialis terpercaya di Surakarta sejak 1992. Drg. Christianie, Sp. Perio. Aesthetic & Implant Center.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cinzel:wght@400;500;600&family=Lato:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --burg:#5C1A28;--burg-deep:#3A0F19;--burg-mid:#8B2E3F;--burg-pale:#F5E8EB;
+  --ivory:#F7F2E8;--ivory2:#EDE5D4;--ivory3:#DDD3BC;
+  --gold:#B8962E;--gold2:#D4AE4A;--gold-pale:#F9F3E0;
+  --ink:#1C1008;--line-b:rgba(184,150,46,.2);--line-w:rgba(184,150,46,.15);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--ivory);color:var(--ink);font-family:'Lato',sans-serif;font-weight:300;overflow-x:hidden;}
+*{cursor:none!important;}
+#c{position:fixed;width:6px;height:6px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);left:-50px;top:-50px;}
+#cr{position:fixed;width:26px;height:26px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);left:-50px;top:-50px;opacity:.4;transition:left .1s,top .1s;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--burg-deep);border-bottom:1px solid var(--line-w);}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:64px;}
+.nav-logo-wrap{display:flex;flex-direction:column;}
+.nav-logo{font-family:'Cinzel',serif;font-size:15px;font-weight:500;color:var(--ivory);letter-spacing:.12em;}
+.nav-logo span{color:var(--gold2);}
+.nav-est{font-size:9px;letter-spacing:.4em;color:rgba(247,242,232,.3);text-transform:uppercase;margin-top:1px;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:rgba(247,242,232,.4);text-decoration:none;transition:color .3s;}
+.nav-links a:hover{color:var(--gold2);}
+.nav-cta{background:var(--gold);color:var(--burg-deep);padding:10px 26px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-family:'Cinzel',serif;text-decoration:none;font-weight:600;transition:background .3s;}
+.nav-cta:hover{background:var(--gold2);}
+
+/* HERO */
+.hero{min-height:100vh;padding-top:64px;background:var(--burg-deep);position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.hero-texture{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(184,150,46,.04) 60px,rgba(184,150,46,.04) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(184,150,46,.03) 60px,rgba(184,150,46,.03) 61px);}
+.hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 40%,rgba(26,9,15,.8) 100%);}
+.hero-year-bg{position:absolute;bottom:-40px;right:-30px;font-family:'Cinzel',serif;font-size:clamp(200px,28vw,380px);font-weight:600;color:rgba(184,150,46,.05);line-height:1;pointer-events:none;letter-spacing:-.02em;}
+.hero-content{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px;position:relative;z-index:2;}
+.hero-orn{display:flex;align-items:center;gap:0;margin-bottom:32px;width:320px;}
+.ot-line{flex:1;height:1px;background:rgba(184,150,46,.35);}
+.ot-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);margin:0 12px;}
+.ot-dot{width:4px;height:4px;border:1px solid var(--gold);transform:rotate(45deg);margin:0 6px;opacity:.5;}
+.hero-badge{font-size:9px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold2);margin-bottom:28px;}
+.hero-crest{margin-bottom:20px;font-size:42px;text-shadow:0 0 40px rgba(184,150,46,.3);}
+.hero-name{font-family:'Cinzel',serif;font-size:clamp(28px,4vw,52px);font-weight:500;color:var(--ivory);letter-spacing:.1em;margin-bottom:8px;}
+.hero-name span{color:var(--gold2);}
+.hero-tagline{font-family:'EB Garamond',serif;font-size:clamp(16px,2vw,22px);font-style:italic;color:rgba(247,242,232,.45);letter-spacing:.05em;margin-bottom:40px;}
+.hero-year-stamp{font-family:'Cinzel',serif;font-size:clamp(80px,12vw,160px);font-weight:600;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(184,150,46,.4);letter-spacing:.05em;margin-bottom:8px;}
+.hero-since{font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:rgba(184,150,46,.5);margin-bottom:44px;}
+.hero-div{display:flex;align-items:center;gap:12px;margin-bottom:44px;width:280px;}
+.hd-l{flex:1;height:1px;background:rgba(184,150,46,.25);}
+.hd-d{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+.hb1{background:var(--gold);color:var(--burg-deep);padding:14px 40px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-family:'Cinzel',serif;font-weight:600;text-decoration:none;transition:background .3s;}
+.hb1:hover{background:var(--gold2);}
+.hb2{border:1px solid rgba(184,150,46,.35);color:rgba(247,242,232,.5);padding:14px 36px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;transition:all .3s;}
+.hb2:hover{border-color:var(--gold2);color:var(--gold2);}
+.hero-stats{background:rgba(26,9,15,.6);border-top:1px solid var(--line-w);display:flex;position:relative;z-index:2;}
+.hs-item{flex:1;padding:28px 24px;text-align:center;border-right:1px solid var(--line-w);transition:background .3s;}
+.hs-item:last-child{border-right:none;}
+.hs-item:hover{background:rgba(184,150,46,.05);}
+.hs-n{font-family:'Cinzel',serif;font-size:32px;font-weight:400;color:var(--gold2);line-height:1;}
+.hs-n sub{font-size:16px;}
+.hs-l{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(247,242,232,.3);margin-top:8px;}
+
+/* LEGACY */
+#legacy{background:var(--ivory);padding:100px 0;position:relative;overflow:hidden;}
+#legacy::before{content:'LEGASI';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Cinzel',serif;font-size:180px;font-weight:600;color:rgba(92,26,40,.04);line-height:1;pointer-events:none;letter-spacing:.1em;}
+.sec-wrap{max-width:1200px;margin:0 auto;padding:0 60px;}
+.leg-grid{display:grid;grid-template-columns:1fr 2px 1fr;gap:60px;align-items:center;}
+.leg-div-v{background:var(--line-b);height:200px;align-self:center;}
+.eyebrow{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--burg-mid);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--burg-mid);}
+.eyebrow-w{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold2);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.eyebrow-w::before{content:'';width:28px;height:1px;background:var(--gold2);}
+.eyebrow-c{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:inline-flex;align-items:center;gap:14px;}
+.eyebrow-c::before,.eyebrow-c::after{content:'';width:32px;height:1px;background:var(--gold);}
+.sec-title{font-family:'EB Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:400;line-height:1.2;color:var(--burg-deep);}
+.sec-title em{font-style:italic;color:var(--gold);}
+.sec-title-w{font-family:'EB Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:400;line-height:1.2;color:var(--ivory);}
+.sec-title-w em{font-style:italic;color:var(--gold2);}
+.sec-title-c{font-family:'EB Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:400;line-height:1.2;color:var(--burg-deep);text-align:center;}
+.sec-title-c em{font-style:italic;color:var(--gold);}
+.sec-body{font-size:14px;line-height:2.1;color:rgba(28,16,8,.55);}
+.leg-facts{display:flex;flex-direction:column;gap:24px;}
+.leg-fact{padding:24px 28px;border-left:3px solid var(--gold);background:var(--gold-pale);transition:transform .3s;}
+.leg-fact:hover{transform:translateX(6px);}
+.lfn{font-family:'Cinzel',serif;font-size:36px;color:var(--burg-deep);font-weight:400;line-height:1;}
+.lfn sub{font-size:18px;color:var(--gold);}
+.lfl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(28,16,8,.4);margin-top:6px;}
+
+/* DOKTER */
+#dokter{background:var(--burg);padding:100px 0;position:relative;overflow:hidden;}
+.dok-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.dok-body{font-size:14px;line-height:2.1;color:rgba(247,242,232,.45);margin-bottom:36px;}
+.dok-creds{display:flex;flex-direction:column;gap:12px;}
+.dok-cred{display:flex;align-items:flex-start;gap:14px;padding:14px 20px;background:rgba(247,242,232,.05);border-left:2px solid var(--gold);}
+.dok-ci{font-size:14px;min-width:20px;margin-top:2px;}
+.dok-ct{font-size:12px;color:rgba(247,242,232,.6);line-height:1.7;}
+.dok-ct b{display:block;color:rgba(247,242,232,.85);font-weight:400;margin-bottom:1px;}
+.dok-card{background:rgba(247,242,232,.06);border:1px solid rgba(184,150,46,.2);padding:44px 40px;text-align:center;position:relative;}
+.dok-card::before,.dok-card::after{content:'';position:absolute;width:20px;height:20px;border-color:var(--gold);border-style:solid;opacity:.4;}
+.dok-card::before{top:12px;left:12px;border-width:1px 0 0 1px;}
+.dok-card::after{bottom:12px;right:12px;border-width:0 1px 1px 0;}
+.dok-avatar{font-size:64px;margin-bottom:24px;}
+.dok-cname{font-family:'Cinzel',serif;font-size:22px;font-weight:500;color:var(--ivory);letter-spacing:.06em;margin-bottom:4px;}
+.dok-ctitle{font-size:12px;letter-spacing:.2em;color:var(--gold2);text-transform:uppercase;margin-bottom:24px;}
+.dok-cdiv{height:1px;background:rgba(184,150,46,.2);margin-bottom:24px;}
+.dok-specs{display:flex;flex-direction:column;gap:10px;}
+.dok-spec{display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;letter-spacing:.1em;color:rgba(247,242,232,.45);}
+.dok-spec::before{content:'◆';font-size:6px;color:var(--gold);opacity:.6;}
+
+/* SERVICES */
+#services{background:var(--ivory2);padding:100px 0;}
+.srv-hdr{text-align:center;margin-bottom:64px;}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.srv-card{background:var(--ivory);padding:44px 36px;border:1px solid rgba(92,26,40,.08);position:relative;transition:all .35s;overflow:hidden;}
+.srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--burg),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.srv-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(92,26,40,.1);}
+.srv-card:hover::before{transform:scaleX(1);}
+.srv-bg{position:absolute;bottom:-16px;right:16px;font-family:'Cinzel',serif;font-size:80px;font-weight:600;color:rgba(92,26,40,.05);line-height:1;pointer-events:none;}
+.srv-icon{font-size:32px;margin-bottom:20px;display:block;}
+.srv-name{font-family:'EB Garamond',serif;font-size:24px;font-weight:500;color:var(--burg-deep);margin-bottom:12px;}
+.srv-desc{font-size:12px;line-height:2;color:rgba(28,16,8,.5);}
+.srv-more{margin-top:20px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px;transition:gap .3s;}
+.srv-more::after{content:'→';}
+.srv-card:hover .srv-more{gap:14px;}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--burg-deep);padding:100px 0;position:relative;overflow:hidden;}
+#testimonials::before{content:'"';position:absolute;top:-40px;left:40px;font-family:'EB Garamond',serif;font-size:400px;color:rgba(184,150,46,.04);line-height:1;pointer-events:none;font-style:italic;}
+.testi-wrap{max-width:900px;margin:0 auto;padding:0 60px;text-align:center;}
+.testi-ey{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold2);margin-bottom:48px;display:inline-flex;align-items:center;gap:14px;}
+.testi-ey::before,.testi-ey::after{content:'';width:28px;height:1px;background:var(--gold2);opacity:.4;}
+.testi-slide{display:none;}
+.testi-slide.active{display:block;}
+.testi-q{font-family:'EB Garamond',serif;font-size:clamp(20px,2.8vw,32px);font-style:italic;font-weight:400;color:var(--ivory);line-height:1.6;margin-bottom:36px;}
+.testi-stars{color:var(--gold2);font-size:14px;letter-spacing:4px;margin-bottom:16px;}
+.testi-auth{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.2em;color:var(--gold2);text-transform:uppercase;}
+.testi-role{font-size:10px;color:rgba(247,242,232,.25);margin-top:4px;letter-spacing:.1em;}
+.testi-nav{display:flex;justify-content:center;gap:10px;margin-top:48px;}
+.testi-dot{width:24px;height:2px;background:rgba(184,150,46,.25);border:none;transition:all .3s;}
+.testi-dot.active{background:var(--gold2);width:40px;}
+
+/* BOOKING */
+#booking{background:var(--ivory);padding:100px 0;}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.book-title{font-family:'EB Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:400;line-height:1.2;color:var(--burg-deep);margin-bottom:20px;}
+.book-title em{font-style:italic;color:var(--gold);}
+.book-body{font-size:13px;line-height:2.1;color:rgba(28,16,8,.5);margin-bottom:40px;}
+.cc-list{display:flex;flex-direction:column;gap:2px;}
+.cc{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:var(--ivory2);border-left:3px solid var(--burg);transition:border-color .3s;}
+.cc:hover{border-color:var(--gold);}
+.cc-icon{font-size:18px;min-width:24px;margin-top:1px;}
+.cc-label{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--burg-mid);display:block;margin-bottom:4px;}
+.cc-val{font-size:13px;color:var(--ink);line-height:1.7;}
+.form-wrap{background:var(--ivory2);border:1px solid rgba(92,26,40,.1);padding:44px 40px;position:relative;}
+.form-wrap::before,.form-wrap::after{content:'';position:absolute;width:24px;height:24px;border-color:var(--gold);border-style:solid;opacity:.3;}
+.form-wrap::before{top:14px;left:14px;border-width:1px 0 0 1px;}
+.form-wrap::after{bottom:14px;right:14px;border-width:0 1px 1px 0;}
+.form-title{font-family:'Cinzel',serif;font-size:18px;font-weight:500;color:var(--burg-deep);letter-spacing:.08em;margin-bottom:28px;text-align:center;}
+.fg{margin-bottom:14px;}
+.fl{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--burg-mid);display:block;margin-bottom:6px;}
+.fi{width:100%;background:var(--ivory);border:1px solid rgba(92,26,40,.12);border-bottom:1.5px solid rgba(92,26,40,.2);padding:12px 15px;font-family:'Lato',sans-serif;font-size:13px;color:var(--ink);outline:none;transition:border-color .3s;}
+.fi:focus{border-color:var(--burg);}
+.fi::placeholder{color:rgba(28,16,8,.25);}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fsub{width:100%;margin-top:8px;background:var(--burg-deep);border:none;padding:15px;color:var(--gold2);font-family:'Cinzel',serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;transition:background .3s;}
+.fsub:hover{background:var(--burg);}
+
+/* FOOTER */
+footer{background:var(--burg-deep);border-top:1px solid var(--line-w);padding:64px 60px 32px;}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:52px;padding-bottom:40px;border-bottom:1px solid rgba(184,150,46,.1);margin-bottom:28px;}
+.ft-brand{font-family:'Cinzel',serif;font-size:18px;font-weight:500;color:var(--ivory);letter-spacing:.1em;margin-bottom:6px;}
+.ft-brand span{color:var(--gold2);}
+.ft-sub-w{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(247,242,232,.25);margin-bottom:16px;}
+.ft-desc{font-size:12px;color:rgba(247,242,232,.2);line-height:1.9;max-width:240px;}
+.ft-col h4{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.ft-col ul{list-style:none;}
+.ft-col li{margin-bottom:9px;}
+.ft-col a{font-size:11px;color:rgba(247,242,232,.2);text-decoration:none;transition:color .3s;}
+.ft-col a:hover{color:var(--gold2);}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-size:10px;color:rgba(247,242,232,.15);}
+.ft-seal{display:flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid rgba(184,150,46,.15);}
+.ft-seal-txt{font-size:10px;color:rgba(247,242,232,.2);}
+.ft-seal-num{font-family:'Cinzel',serif;font-size:13px;color:var(--gold2);}
+
+.wa{position:fixed;bottom:26px;right:26px;z-index:90;background:#25D366;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 6px 20px rgba(37,211,102,.3);transition:transform .3s;animation:wap 2.5s infinite;}
+.wa:hover{transform:scale(1.1);}
+@keyframes wap{0%,100%{box-shadow:0 6px 20px rgba(37,211,102,.3);}50%{box-shadow:0 6px 36px rgba(37,211,102,.55);}}
+
+.rev{opacity:1;transform:none;transition:opacity .8s,transform .8s;}
+.rev.pre{opacity:0;transform:translateY(22px);}
+.rev.in{opacity:1;transform:none;}
+
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .nav-top{padding:0 20px;}
+  .hero-content{padding:40px 20px;}
+  .hero-stats{flex-direction:column;}
+  .hs-item{border-right:none;border-bottom:1px solid var(--line-w);}
+  .sec-wrap{padding:0 20px;}
+  .leg-grid{grid-template-columns:1fr;gap:36px;}
+  .leg-div-v{display:none;}
+  .dok-grid{grid-template-columns:1fr;gap:40px;}
+  .srv-grid{grid-template-columns:1fr;}
+  .book-grid{grid-template-columns:1fr;gap:40px;}
+  .ft-top{grid-template-columns:1fr 1fr;gap:24px;}
+  .ft-bot{flex-direction:column;gap:12px;text-align:center;}
+  .f2{grid-template-columns:1fr;}
+  footer{padding:52px 20px 28px;}
+  .testi-wrap{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+<div id="c"></div><div id="cr"></div>
+<a href="https://wa.me/6281804404377" class="wa" target="_blank">💬</a>
+
+<nav>
+  <div class="nav-top">
+    <div class="nav-logo-wrap">
+      <div class="nav-logo"><span>C</span>DC · Christianie Dental Care</div>
+      <div class="nav-est">Aesthetic & Implant Center · Est. 1992</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#legacy">Tentang</a></li>
+      <li><a href="#services">Layanan</a></li>
+      <li><a href="#testimonials">Ulasan</a></li>
+      <li><a href="#booking">Booking</a></li>
+    </ul>
+    <a href="#booking" class="nav-cta">Buat Janji</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-year-bg">1992</div>
+  <div class="hero-content">
+    <div class="hero-orn"><div class="ot-line"></div><div class="ot-dot"></div><div class="ot-diamond"></div><div class="ot-dot"></div><div class="ot-line"></div></div>
+    <div class="hero-badge">Aesthetic & Implant Center · Surakarta</div>
+    <div class="hero-crest">🦷</div>
+    <div class="hero-name">Christianie <span>Dental Care</span></div>
+    <div class="hero-tagline">Dipercaya lebih dari tiga dekade di Surakarta</div>
+    <div class="hero-year-stamp">1992</div>
+    <div class="hero-since">Berdiri sejak · MCMXCII</div>
+    <div class="hero-div"><div class="hd-l"></div><div class="hd-d"></div><div class="hd-l"></div></div>
+    <div class="hero-btns">
+      <a href="#booking" class="hb1">Buat Janji</a>
+      <a href="#services" class="hb2">Lihat Layanan</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hs-item"><div class="hs-n">4.9<sub>★</sub></div><div class="hs-l">Rating Google · 612 Ulasan</div></div>
+    <div class="hs-item"><div class="hs-n">30<sub>+</sub></div><div class="hs-l">Tahun Pengalaman</div></div>
+    <div class="hs-item"><div class="hs-n">Sp.<sub>Perio</sub></div><div class="hs-l">Dokter Spesialis</div></div>
+    <div class="hs-item"><div class="hs-n">5</div><div class="hs-l">Cabang Spesialisasi</div></div>
+  </div>
+</div>
+
+<section id="legacy">
+  <div class="sec-wrap">
+    <div class="leg-grid">
+      <div>
+        <div class="eyebrow rev">Warisan & Kepercayaan</div>
+        <h2 class="sec-title rev" style="margin-bottom:24px;">Lebih dari tiga dekade<br><em>merawat senyum Solo.</em></h2>
+        <p class="sec-body rev">Sejak 1992, Christianie Dental Care hadir sebagai klinik gigi terpercaya di Surakarta. Dipimpin langsung oleh Drg. Christianie, Sp. Perio — klinik ini telah merawat ribuan pasien dari berbagai generasi.<br><br>Kepercayaan yang kami jaga bukan sekadar angka, melainkan nama yang terus direkomendasikan dari satu generasi ke generasi berikutnya.</p>
+      </div>
+      <div class="leg-div-v rev"></div>
+      <div class="leg-facts">
+        <div class="leg-fact rev"><div class="lfn">1992</div><div class="lfl">Tahun berdiri · Surakarta</div></div>
+        <div class="leg-fact rev"><div class="lfn">612<sub>★</sub></div><div class="lfl">Ulasan bintang 5 di Google</div></div>
+        <div class="leg-fact rev"><div class="lfn">4.9<sub>/5</sub></div><div class="lfl">Rata-rata rating pasien</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dokter">
+  <div class="sec-wrap">
+    <div class="dok-grid">
+      <div>
+        <div class="eyebrow-w rev">Tenaga Ahli</div>
+        <h2 class="sec-title-w rev" style="margin-bottom:24px;">Ditangani langsung oleh<br><em>Dokter Spesialis.</em></h2>
+        <p class="dok-body rev">Drg. Christianie, Sp. Perio adalah spesialis periodontic yang memimpin langsung setiap prosedur. Keahliannya mencakup seluruh aspek kesehatan gigi — dari perawatan dasar hingga implan dan estetika kompleks.</p>
+        <div class="dok-creds">
+          <div class="dok-cred rev"><span class="dok-ci">🎓</span><span class="dok-ct"><b>Spesialis Periodontic (Sp. Perio)</b>Ahli jaringan pendukung gigi — gusi, tulang, dan implan.</span></div>
+          <div class="dok-cred rev"><span class="dok-ci">🏥</span><span class="dok-ct"><b>Aesthetic & Implant Center</b>Sertifikasi estetika dan pemasangan implan gigi.</span></div>
+          <div class="dok-cred rev"><span class="dok-ci">📅</span><span class="dok-ct"><b>30+ Tahun Praktik</b>Pengalaman sejak 1992 melayani masyarakat Surakarta.</span></div>
+        </div>
+      </div>
+      <div class="dok-card rev">
+        <div class="dok-avatar">👩‍⚕️</div>
+        <div class="dok-cname">Drg. Christianie</div>
+        <div class="dok-ctitle">Sp. Perio · Spesialis Periodontic</div>
+        <div class="dok-cdiv"></div>
+        <div class="dok-specs">
+          <div class="dok-spec">Estetik & Veneer</div>
+          <div class="dok-spec">Dental Implant</div>
+          <div class="dok-spec">Orthodontic</div>
+          <div class="dok-spec">Oral Surgery</div>
+          <div class="dok-spec">Periodontic</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="sec-wrap">
+    <div class="srv-hdr">
+      <div class="eyebrow-c rev">Layanan Kami</div>
+      <h2 class="sec-title-c rev">Solusi gigi <em>spesialis</em> lengkap.</h2>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card rev"><span class="srv-icon">✨</span><div class="srv-bg">01</div><div class="srv-name">Estetik Gigi</div><p class="srv-desc">Bleaching, composite bonding, dan perawatan estetika untuk senyum yang lebih cerah dan percaya diri.</p><div class="srv-more">Selengkapnya</div></div>
+      <div class="srv-card rev"><span class="srv-icon">📐</span><div class="srv-bg">02</div><div class="srv-name">Orthodontic</div><p class="srv-desc">Kawat gigi konvensional dan clear aligner untuk merapikan susunan gigi dengan hasil presisi.</p><div class="srv-more">Selengkapnya</div></div>
+      <div class="srv-card rev"><span class="srv-icon">🔩</span><div class="srv-bg">03</div><div class="srv-name">Dental Implan</div><p class="srv-desc">Penggantian gigi permanen dengan implan titanium berkualitas. Ditangani langsung oleh spesialis.</p><div class="srv-more">Selengkapnya</div></div>
+      <div class="srv-card rev"><span class="srv-icon">🔧</span><div class="srv-bg">04</div><div class="srv-name">Oral Surgery</div><p class="srv-desc">Bedah mulut termasuk pencabutan gigi bungsu impaksi dan prosedur bedah mulut lainnya.</p><div class="srv-more">Selengkapnya</div></div>
+      <div class="srv-card rev"><span class="srv-icon">💎</span><div class="srv-bg">05</div><div class="srv-name">Veneer & Crown</div><p class="srv-desc">Lapisan porselen dan mahkota gigi untuk perlindungan dan penampilan gigi yang sempurna.</p><div class="srv-more">Selengkapnya</div></div>
+      <div class="srv-card rev"><span class="srv-icon">🩺</span><div class="srv-bg">06</div><div class="srv-name">Perawatan Umum</div><p class="srv-desc">Scaling, tambal gigi, pemeriksaan rutin, dan konsultasi untuk kesehatan gigi keluarga.</p><div class="srv-more">Selengkapnya</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="testi-wrap">
+    <div class="testi-ey rev">Ulasan Pasien</div>
+    <div>
+      <div class="testi-slide active"><div class="testi-stars">★★★★★</div><p class="testi-q">"Dokternya sangat ramah, friendly, dan hasilnya good job! Sudah bertahun-tahun ke sini dan selalu puas."</p><div class="testi-auth">Pasien Google Review</div><div class="testi-role">Christianie Dental Care · Surakarta</div></div>
+      <div class="testi-slide"><div class="testi-stars">★★★★★</div><p class="testi-q">"The best dental doctor in Solo. Penjelasannya jelas, pelayanannya profesional, dan hasilnya memuaskan sekali."</p><div class="testi-auth">Pasien Google Review</div><div class="testi-role">Christianie Dental Care · Surakarta</div></div>
+      <div class="testi-slide"><div class="testi-stars">★★★★★</div><p class="testi-q">"Great experience, good services and clear instruction by dentist. Highly recommended untuk warga Solo!"</p><div class="testi-auth">Pasien Google Review</div><div class="testi-role">Christianie Dental Care · Surakarta</div></div>
+    </div>
+    <div class="testi-nav">
+      <button class="testi-dot active" onclick="goSlide(0)"></button>
+      <button class="testi-dot" onclick="goSlide(1)"></button>
+      <button class="testi-dot" onclick="goSlide(2)"></button>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="sec-wrap">
+    <div class="book-grid">
+      <div>
+        <div class="eyebrow rev">Hubungi Kami</div>
+        <h2 class="book-title rev">Buat janji dengan<br><em>dokter spesialis.</em></h2>
+        <p class="book-body rev">Reservasi dengan perjanjian diutamakan. Hubungi kami via telepon, WhatsApp, atau isi form reservasi di samping.</p>
+        <div class="cc-list">
+          <div class="cc rev"><span class="cc-icon">📍</span><div><span class="cc-label">Alamat</span><span class="cc-val">Jl. Teuku Umar No.71, Keprabon<br>Surakarta, Jawa Tengah 57131</span></div></div>
+          <div class="cc rev"><span class="cc-icon">📞</span><div><span class="cc-label">Telepon / WhatsApp</span><span class="cc-val">0818-0440-4377 / 0271 642076</span></div></div>
+          <div class="cc rev"><span class="cc-icon">🕐</span><div><span class="cc-label">Jam Praktik</span><span class="cc-val">Senin – Jumat: 10.00 – 21.00<br>Sabtu: 10.00 – 14.00</span></div></div>
+          <div class="cc rev"><span class="cc-icon">📸</span><div><span class="cc-label">Instagram</span><span class="cc-val">@christianiedentalcare</span></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="form-wrap">
+          <div class="form-title rev">Form Reservasi</div>
+          <div class="f2">
+            <div class="fg rev"><label class="fl">Nama</label><input class="fi" type="text" placeholder="Nama lengkap"></div>
+            <div class="fg rev"><label class="fl">WhatsApp</label><input class="fi" type="tel" placeholder="0818-xxxx-xxxx"></div>
+          </div>
+          <div class="fg rev"><label class="fl">Layanan</label><select class="fi"><option value="" disabled selected>Pilih layanan</option><option>Estetik Gigi</option><option>Orthodontic</option><option>Dental Implan</option><option>Oral Surgery</option><option>Veneer & Crown</option><option>Perawatan Umum</option><option>Konsultasi</option></select></div>
+          <div class="f2">
+            <div class="fg rev"><label class="fl">Tanggal</label><input class="fi" type="date"></div>
+            <div class="fg rev"><label class="fl">Waktu</label><input class="fi" type="time" min="10:00" max="21:00"></div>
+          </div>
+          <div class="fg rev"><label class="fl">Keluhan</label><textarea class="fi" rows="3" placeholder="Ceritakan keluhan Anda..."></textarea></div>
+          <button class="fsub rev">Kirim Reservasi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <div class="ft-brand"><span>CDC</span> · Christianie Dental Care</div>
+      <div class="ft-sub-w">Aesthetic & Implant Center · Est. 1992</div>
+      <p class="ft-desc">Klinik gigi spesialis terpercaya di Surakarta. Drg. Christianie, Sp. Perio — merawat senyum masyarakat Solo sejak 1992.</p>
+    </div>
+    <div class="ft-col"><h4>Layanan</h4><ul><li><a href="#">Estetik Gigi</a></li><li><a href="#">Orthodontic</a></li><li><a href="#">Dental Implan</a></li><li><a href="#">Oral Surgery</a></li><li><a href="#">Veneer & Crown</a></li></ul></div>
+    <div class="ft-col"><h4>Informasi</h4><ul><li><a href="#">0818-0440-4377</a></li><li><a href="#">@christianiedentalcare</a></li><li><a href="#">Jl. Teuku Umar No.71</a></li><li><a href="#">Surakarta 57131</a></li><li><a href="#">Buat Janji</a></li></ul></div>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-copy">© 2025 Christianie Dental Care · Surakarta, Jawa Tengah · Est. 1992</p>
+    <div class="ft-seal"><span class="ft-seal-txt">Google Rating</span><span class="ft-seal-num">★ 4.9</span><span class="ft-seal-txt">· 612 ulasan</span></div>
+  </div>
+</footer>
+
+<script>
+var c=document.getElementById('c'),cr=document.getElementById('cr');
+document.addEventListener('mousemove',function(e){c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';setTimeout(function(){cr.style.left=e.clientX+'px';cr.style.top=e.clientY+'px';},100);});
+var cur=0;
+function goSlide(n){document.querySelectorAll('.testi-slide').forEach(function(s){s.classList.remove('active');});document.querySelectorAll('.testi-dot').forEach(function(d){d.classList.remove('active');});document.querySelectorAll('.testi-slide')[n].classList.add('active');document.querySelectorAll('.testi-dot')[n].classList.add('active');cur=n;}
+setInterval(function(){goSlide((cur+1)%3);},5000);
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.remove('pre');entry.target.classList.add('in');},i*80);}});},{threshold:0.08});
+document.querySelectorAll('.rev').forEach(function(el){el.classList.add('pre');obs.observe(el);});
+</script>
+</body>
+</html>
